@@ -1,0 +1,1 @@
+The repository contains working notes on selected topics in scientific computing.
