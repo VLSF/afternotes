@@ -30,8 +30,7 @@ Combining these two facts, we obtain
 $$V(\alpha, i_2, \dots, i_d) = \sum_{\beta}\widetilde{X}(\alpha, i_2, \dots, i_k, \beta) Y(\beta, i_{k+1},\dots, i_{d}),$$
 so indeed $k$-th unfolding of $V$ has rank $r_k$.
 To continue the induction process, we reshape $V$ and again consider the first unfolding
-$$V(\alpha i_2, i_3, \dots, i_d) = \sum_{\beta} U(\alpha i_2, \beta)V^{'}(\beta, t_3,\dots, i_d) = \sum_{\beta} G(\alpha, i_2, \beta) V^{'}(\beta, t_3,\dots, i_d).
-$$
+$$V(\alpha i_2, i_3, \dots, i_d) = \sum_{\beta} U(\alpha i_2, \beta)V^{'}(\beta, t_3,\dots, i_d) = \sum_{\beta} G(\alpha, i_2, \beta) V^{'}(\beta, t_3,\dots, i_d).$$
 The proof is constructive, so it is not hard to deduce an SVD-based algorithm for the sequential computation of tensor cores.
 # Approximate TT
 
