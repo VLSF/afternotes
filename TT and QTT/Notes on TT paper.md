@@ -27,9 +27,7 @@ $$V = A_1^{T}U \left(U^T U\right)^{-1} = A_1^{T}W \Leftrightarrow V(\alpha,i_2,\
 and the fact that $k$-th unfoldings of $A$ has rank $r_k$, that is,
 $$A(i_1, \dots, i_d) = \sum_{\alpha = 1}^{r_k} X(i_1, \dots, i_k, \alpha) Y(\alpha, i_{k+1},\dots, i_{d}).$$
 Combining these two facts, we obtain
-$$
-V(\alpha, i_2, \dots, i_d) = \sum_{\beta}\widetilde{X}(\alpha, i_2, \dots, i_k, \beta) Y(\beta, i_{k+1},\dots, i_{d}),
-$$
+$$V(\alpha, i_2, \dots, i_d) = \sum_{\beta}\widetilde{X}(\alpha, i_2, \dots, i_k, \beta) Y(\beta, i_{k+1},\dots, i_{d}),$$
 so indeed $k$-th unfolding of $V$ has rank $r_k$.
 To continue the induction process, we reshape $V$ and again consider the first unfolding
 $$V(\alpha i_2, i_3, \dots, i_d) = \sum_{\beta} U(\alpha i_2, \beta)V^{'}(\beta, t_3,\dots, i_d) = \sum_{\beta} G(\alpha, i_2, \beta) V^{'}(\beta, t_3,\dots, i_d).
