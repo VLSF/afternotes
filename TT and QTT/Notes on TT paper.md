@@ -50,9 +50,8 @@ For $d=2$, everything is known since TT-SVD is SVD.
 Consider the first unfolding for $d > 2$ and use SVD to find
 $$A_1 = U_1 B_1 + E_1.$$
 Now, tensor $B_1$ (considered as tensor with $d$ dimensions with first and second indices merged) will be approximated by TT-SVD with a different tensor $\hat{B}_1$. So, for the distance between the original tensor and the approximate one, we get
-$$\left\|A - B\right\|_F^2 = \left\|A_1 - U_1\hat{B}\right\|_F^2 = \left\|A_1 - U_1\hat{B}_1 - U_1 B +U_1 B_1\right\|_F^2 = \left\|E_1 + U_1(B_1 - \hat{B}_1)\right\|_F^2
-$$
-$$= \left\|E_1\right\|_F^2 + \left\|B_1 - \hat{B}_1\right\|_{F}^2,$$
+$$\left\|A - B\right\|_F^2 = \left\|A_1 - U_1\hat{B}\right\|_F^2 = \left\|A_1 - U_1\hat{B}_1 - U_1 B +U_1 B_1\right\|_F^2 = \left\|E_1 + U_1(B_1 - \hat{B}_1)\right\|_F^2$$
+$$=\left\|E_1\right\|_F^2 + \left\|B_1 - \hat{B}_1\right\|_{F}^2,$$
 where we used $U_1^T U_1 = I$ and $U_1^T E_1 = 0$, which is direct consequence of SVD used to construct $U_1$, $B_1$ and $E_1$.
 We can proceed by induction if $B_1$ has the same property that $A$, i.e., its remaining unfoldings have approximate rank $r_k$. Let's show that this is the case.
 Observe that
