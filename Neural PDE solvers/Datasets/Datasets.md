@@ -8,3 +8,21 @@ Notebooks with dataset generation:
 Generated datasets (not practical to generate them on the flight):
 1. [Burgers equation](https://disk.yandex.ru/d/kkcRqJYIIkRUgw): the same as in [Burgers dataset](https://github.com/VLSF/afternotes/blob/main/Neural%20PDE%20solvers/Datasets/Burgers%20datasets.ipynb) above, here is [the script](https://github.com/VLSF/afternotes/blob/main/Neural%20PDE%20solvers/Datasets/Burgers.py) used for dataset generation.
 2. [Smooth elliptic equation](https://disk.yandex.ru/d/fz9ghnFEDm90Qw): the same as in [Elliptic smooth](https://github.com/VLSF/afternotes/blob/main/Neural%20PDE%20solvers/Datasets/Elliptic_smooth.py) above, generated with [this script](https://github.com/VLSF/afternotes/blob/main/Neural%20PDE%20solvers/Datasets/Elliptic_smooth.py).
+
+Here is an example how one can download dataset using link above (example for [Burgers equation](https://disk.yandex.ru/d/kkcRqJYIIkRUgw))
+
+```python
+import requests
+from urllib.parse import urlencode
+
+base_url = 'https://cloud-api.yandex.net/v1/disk/public/resources/download?'
+public_key = 'https://disk.yandex.ru/d/kkcRqJYIIkRUgw' # public link
+
+final_url = base_url + urlencode(dict(public_key=public_key))
+response = requests.get(final_url)
+download_url = response.json()['href']
+
+download_response = requests.get(download_url)
+with open('Burgers.npz', 'wb') as f:
+    f.write(download_response.content)
+```
