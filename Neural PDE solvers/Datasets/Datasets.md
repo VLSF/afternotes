@@ -26,3 +26,7 @@ download_response = requests.get(download_url)
 with open('Burgers.npz', 'wb') as f:
     f.write(download_response.content)
 ```
+
+To appear:
+1. Convection-diffusion equation with discontinuous data
+2. Navier-Stokes equation
